@@ -1,0 +1,103 @@
+.header{
+    display: flex;
+    align-items: center;
+    padding-top: 28px;
+    padding-bottom: 62px;
+    &__nav{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__menu{
+        display: flex;
+        padding: 0;
+        list-style: none;
+        li{
+            padding-left: 27px;
+            padding-right: 27px;
+        }
+        a{
+            font-size: 16px;
+            line-height: 19px;
+            text-decoration: none;
+            color: #170C04;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    &__search{
+        cursor: pointer;
+        background: url('../img/search.svg');
+        background-color: transparent;
+        border: none;
+        width: 19px;
+        height: 19px;
+        transition-duration: 300ms;
+        transition-property: opacity;
+        &:hover{
+            opacity: 0.4;
+        }
+    }
+
+    &__cart{
+        background-image: url('../img/cart.svg');
+        width: 21px;
+        height: 20px;
+        text-decoration: none;
+        margin-left: 40px;
+         transition-duration: 300ms;
+            transition-property: opacity;
+         &:hover{
+        opacity: 0.4;
+        }
+    }
+    &__mobile-btn{
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header{
+        position: relative;
+        &__logo{
+            margin-right: auto;
+        }
+        &__menu{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 60px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2) ;
+            padding: 20px 0;
+            li{
+                &:not(:last-child){
+                    margin-bottom: 15px;
+                }
+            }
+            a{
+                display: block;
+                background-color: rgba(226, 123, 58, 0.15);
+                padding: 10px 15px;
+                border-radius: 6px;
+            }
+        }
+        &__mobile-btn{
+            cursor: pointer;
+            display: block;
+            background-image: url('../img/menu-open.svg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: transparent;
+            border: none;
+            width: 30px;
+            height: 30px;
+            margin-left: 40px;
+    }
+        &__nav{
+            order: 1;
+            margin: 0;
+        }
+    }
+}
